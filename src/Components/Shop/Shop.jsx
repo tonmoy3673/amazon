@@ -13,7 +13,7 @@ const Shop = () => {
 
   return (
     <div className="shop-container py-10">
-      <div className="grid grid-cols-3 ">
+      <div className="grid grid-cols-3 items-center justify-center gap-5">
         {products?.map((product) => (
           <Products key={product.id} product={product}></Products>
         ))}
