@@ -2,7 +2,7 @@ const Products = (product) => {
   console.log(product.product);
   const { id, img, name, price, seller, stock } = product.product;
   return (
-    <div className="">
+    <div className="border-2 py-2 pt-4 rounded-md">
       <img
         className="lg:w-42 mx-auto w-9/12 rounded"
         src={img}
