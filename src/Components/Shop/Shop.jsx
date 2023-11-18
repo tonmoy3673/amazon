@@ -9,6 +9,7 @@ const Shop = () => {
   const handleProduct = (product) => {
     const newCart = [...cart, product];
     setCart(newCart);
+    console.log(cart);
   };
 
   useEffect(() => {
@@ -29,7 +30,10 @@ const Shop = () => {
         ))}
       </div>
       <div>
-        <h2>Order Details</h2>
+        <h2 className="text-green-500 text-xl font-semibold py-2">
+          Order Details
+        </h2>
+        <h4>Selected Items : {cart.length}</h4>
       </div>
     </div>
   );
