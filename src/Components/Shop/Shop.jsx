@@ -5,9 +5,10 @@ import Products from "../Products/Products";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-
+  const [cart, setCart] = useState([]);
   const handleProduct = (product) => {
-    console.log(product);
+    const newCart = [...cart, product];
+    setCart(newCart);
   };
 
   useEffect(() => {
@@ -27,7 +28,9 @@ const Shop = () => {
           ></Products>
         ))}
       </div>
-      <h2>Cart Details</h2>
+      <div>
+        <h2>Order Details</h2>
+      </div>
     </div>
   );
 };
