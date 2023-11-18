@@ -5,6 +5,11 @@ import Products from "../Products/Products";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
+
+  const handleProduct = (product) => {
+    console.log(product);
+  };
+
   useEffect(() => {
     fetch("products.json")
       .then((res) => res.json())
@@ -15,7 +20,11 @@ const Shop = () => {
     <div className="shop-container py-10">
       <div className="grid grid-cols-3 items-center justify-center gap-5">
         {products?.map((product) => (
-          <Products key={product.id} product={product}></Products>
+          <Products
+            key={product.id}
+            handleProduct={handleProduct}
+            product={product}
+          ></Products>
         ))}
       </div>
       <h2>Cart Details</h2>

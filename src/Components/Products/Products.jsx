@@ -1,6 +1,7 @@
 const Products = (product) => {
-  console.log(product.product);
+  // console.log(product.product);
   const { id, img, name, price, seller, stock, ratings } = product.product;
+  const handleCart = product.handleProduct;
   return (
     <div className="border-2 py-2 pt-4 rounded-md truncate">
       <img
@@ -18,7 +19,10 @@ const Products = (product) => {
       <h5 className="text-base">Rating : {ratings} stars</h5>
       <h5 className="text-base">Stock : {stock}</h5>
       <div className="py-3">
-        <button className=" bg-green-500 font-semibold hover:bg-orange-500 w-full lg:w-1/2  p-2 rounded-md">
+        <button
+          onClick={() => handleCart(product.product)}
+          className=" bg-green-500 font-semibold hover:bg-orange-500 w-full lg:w-1/2  p-2 rounded-md"
+        >
           Add to Cart
         </button>
       </div>
