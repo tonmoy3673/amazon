@@ -10,7 +10,6 @@ const Shop = () => {
   const handleProduct = (product) => {
     const newCart = [...cart, product];
     setCart(newCart);
-    console.log(cart);
   };
 
   useEffect(() => {
@@ -31,7 +30,7 @@ const Shop = () => {
         ))}
       </div>
       <div>
-        <Cart />
+        <Cart cart={cart} />
       </div>
     </div>
   );
