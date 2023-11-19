@@ -13,6 +13,8 @@ const Cart = (myCart) => {
       </h2>
       <h4>Selected Items :{cart.length}</h4>
       <h4>Total Price : {total}</h4>
+      <h4>Shipping Cost: </h4>
+      <h4>Total Price : {total}</h4>
     </div>
   );
 };
