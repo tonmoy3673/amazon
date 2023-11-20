@@ -12,7 +12,7 @@ const Cart = (myCart) => {
   const totalCost = totalPrice + shippingCost + tax;
 
   return (
-    <div className="text-start px-7">
+    <div className="text-start px-7 sticky top-0">
       <h2 className="text-green-500 text-xl font-semibold py-2">
         Order Details
       </h2>
