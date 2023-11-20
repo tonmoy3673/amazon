@@ -1,5 +1,4 @@
 const Cart = (myCart) => {
-  console.log(myCart);
   const { cart } = myCart;
   let totalPrice = 0;
   let shippingCost = 0;

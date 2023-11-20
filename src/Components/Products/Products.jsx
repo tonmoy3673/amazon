@@ -2,9 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const Products = (product) => {
-  // console.log(product.product);
   const { img, name, price, seller, stock, ratings } = product.product;
   const handleCart = product.handleProduct;
+
   return (
     <div className="border-2 py-2 pt-4 rounded-md truncate">
       <img
