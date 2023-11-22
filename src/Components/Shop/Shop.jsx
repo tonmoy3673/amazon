@@ -23,8 +23,13 @@ const Shop = () => {
 
   useEffect(() => {
     const storedCart = getShoppingCart();
-    console.log(storedCart);
-  }, []);
+    for (const id in storedCart) {
+      const addedProduct = products.find((product) => product.id === id);
+      const quantity = storedCart[id];
+      addedProduct.quantity = quantity;
+      console.log(addedProduct);
+    }
+  }, [products]);
 
   return (
     <div className="shop-container py-10">
