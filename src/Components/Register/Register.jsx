@@ -1,9 +1,21 @@
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+  console.log(createUser);
+  const handleForm = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const name = event.target.name.value;
+    console.log(email, password, name);
+  };
   return (
     <div className="text-center">
       <h2 className="py-5 text-2xl font-semibold">Please Register</h2>
       <div>
-        <form>
+        <form onSubmit={handleForm}>
           <input
             className="mb-3 border-2 p-1 rounded-md"
             type="text"
