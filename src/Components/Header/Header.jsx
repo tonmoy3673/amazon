@@ -6,8 +6,7 @@ const Header = () => {
       <div className="flex">
         <img src={logo} className="lg:w-8 w-6" alt="img" />
         <h2 className="lg:ms-3 text-xl font-semibold text-green-500 band">
-          {" "}
-          ShopBD{" "}
+          ShopBD
         </h2>
       </div>
       <div className="menu ms-0">
