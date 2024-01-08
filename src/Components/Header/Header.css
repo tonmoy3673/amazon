@@ -3,7 +3,11 @@
     align-items: center;
     justify-content: space-between;
 }
-
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .menu a:hover{
     color: orange;
 }

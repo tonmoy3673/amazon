@@ -9,17 +9,29 @@ const Header = () => {
           ShopBD
         </h2>
       </div>
-      <div className="menu ms-0">
-        <a className="me-4" href="/shop">
+      <div className="flex mx-auto">
+        <a
+          className="me-4 text-blue-500 hover:text-orange-600 font-semibold"
+          href="/shop"
+        >
           Shop
         </a>
-        <a className="me-4" href="/oder">
+        <a
+          className="me-4  text-blue-500 hover:text-orange-600 font-semibold"
+          href="/oder"
+        >
           Order
         </a>
-        <a className="me-4" href="/inventory">
+        <a
+          className="me-4  text-blue-500 hover:text-orange-600 font-semibold"
+          href="/inventory"
+        >
           Inventory
         </a>
-        <a className="me-4" href="/login">
+        <a
+          className="me-4  text-blue-500 hover:text-orange-600 font-semibold"
+          href="/login"
+        >
           Login
         </a>
       </div>
