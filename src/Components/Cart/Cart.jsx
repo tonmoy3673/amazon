@@ -1,4 +1,4 @@
-const Cart = ({ cart }) => {
+const Cart = ({ cart, removeItem }) => {
   console.log(cart);
   let totalPrice = 0;
   let shippingCost = 0;
@@ -27,7 +27,12 @@ const Cart = ({ cart }) => {
               <h2 key={item.id}>
                 {item.name}{" "}
                 <span className="ms-3">
-                  <button>X</button>
+                  <button
+                    onClick={() => removeItem(item.id)}
+                    className="font-semibold text-red-600"
+                  >
+                    X
+                  </button>
                 </span>
               </h2>
             );

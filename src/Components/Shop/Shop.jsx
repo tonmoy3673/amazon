@@ -15,6 +15,12 @@ const Shop = () => {
     addToDb(product.id);
   };
 
+  const removeItem = (id) => {
+    const newItem = cart.filter((item) => item.id !== id);
+    console.log(id);
+    setCart(newItem);
+  };
+
   useEffect(() => {
     fetch("products.json")
       .then((res) => res.json())
@@ -40,14 +46,14 @@ const Shop = () => {
       <div className="grid grid-cols-3 items-center justify-center gap-5">
         {products?.map((product) => (
           <Products
-            key={product.id}
+            key={product?.id}
             handleProduct={handleProduct}
             product={product}
           ></Products>
         ))}
       </div>
       <div>
-        <Cart cart={cart} />
+        <Cart removeItem={removeItem} cart={cart} />
       </div>
     </div>
   );
