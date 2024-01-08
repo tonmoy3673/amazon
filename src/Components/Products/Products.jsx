@@ -6,7 +6,7 @@ const Products = (product) => {
   const handleCart = product.handleProduct;
 
   return (
-    <div className="border-2 py-2 pt-4 rounded-md truncate">
+    <div className="border-2 py-2 pt-4 rounded-md truncate text-center">
       <img
         className="lg:w-42 mx-auto w-9/12 rounded"
         src={img}
