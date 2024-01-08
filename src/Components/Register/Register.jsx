@@ -9,6 +9,13 @@ const Register = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     const name = event.target.name.value;
+    createUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        event.target.reset();
+        console.log(loggedUser);
+      })
+      .catch((error) => console.log(error.message));
     console.log(email, password, name);
   };
   return (
