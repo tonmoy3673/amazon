@@ -36,7 +36,7 @@ const Shop = () => {
   }, [products]);
 
   return (
-    <div className="shop-container py-10">
+    <div className="shop-container py-10 px-12">
       <div className="grid grid-cols-3 items-center justify-center gap-5">
         {products?.map((product) => (
           <Products
